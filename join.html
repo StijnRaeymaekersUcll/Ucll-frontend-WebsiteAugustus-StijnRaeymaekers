@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Eventwise • Join our crew</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="brandbar container">
+        <div class="brand">
+          <h1>EVENTWISE</h1>
+          <span>For Eventcrew Leuven</span>
+        </div>
+        <nav class="nav" aria-label="Primary">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="events.html">Events</a>
+          <a href="join.html" aria-current="page">Join our crew</a>
+          <a href="spec.html">Site spec</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main" class="container form-layout">
+      <div class="form-column">
+        <h2>Become part of the crew</h2>
+
+        <p id="formnote" class="hint">
+          Fill out the form below to join our crew. <br />
+          Required fields are marked with *
+        </p>
+
+        <form action="#" method="post" aria-describedby="formnote">
+          <label for="event">Which event would you like to join?</label>
+          <select id="event" name="event" required>
+            <option value="" disabled selected>Select an event</option>
+            <option value="festival">Summer Festival 2025</option>
+            <option value="sports">Leuven Sports Cup</option>
+            <option value="concert">City Concert Night</option>
+            <option value="other">All of the above</option>
+          </select>
+
+          <div class="grid" style="grid-template-columns: 1fr 1fr">
+            <div>
+              <label for="fullname">Full name *</label>
+              <input id="fullname" name="fullname" type="text" required />
+            </div>
+            <div>
+              <label for="email">Email *</label>
+              <input
+                id="email"
+                name="email"
+                type="email"
+                required
+                placeholder="you@example.com"
+              />
+            </div>
+            <div>
+              <label for="phone">Phone</label>
+              <input
+                id="phone"
+                name="phone"
+                type="tel"
+                placeholder="+32 470 00 00 00"
+              />
+
+              <label for="role">Preferred role</label>
+              <select id="role" name="role">
+                <option value="">Select…</option>
+                <option>Hospitality-crew</option>
+                <option>Bar-crew</option>
+                <option>Stage-crew</option>
+                <option>Flex-crew</option>
+                <option>Site-crew</option>
+              </select>
+
+              <fieldset>
+                <legend>Available shifts</legend>
+                <div class="control-row">
+                  <label class="control-inline"
+                    ><input type="checkbox" name="shift" value="day" required />
+                    Day</label
+                  >
+                  <label class="control-inline"
+                    ><input type="checkbox" name="shift" value="evening" />
+                    Evening</label
+                  >
+                  <label class="control-inline"
+                    ><input type="checkbox" name="shift" value="night" />
+                    Night</label
+                  >
+                </div>
+                <p class="hint">Pick at least one.</p>
+              </fieldset>
+            </div>
+
+            <fieldset>
+              <legend>Availability *</legend>
+
+              <label for="avail_from">From</label>
+              <input type="date" id="avail_from" name="avail_from" />
+
+              <label for="avail_to">To</label>
+              <input type="date" id="avail_to" name="avail_to" />
+
+              <p class="hint">
+                See <a id="link" href="events.html">Events</a> for more
+                information about dates.
+              </p>
+            </fieldset>
+          </div>
+
+          <fieldset>
+            <legend>T-shirt size</legend>
+            <div class="control-row">
+              <label class="control-inline"
+                ><input type="radio" name="size" value="S" /> S</label
+              >
+              <label class="control-inline"
+                ><input type="radio" name="size" value="M" /> M</label
+              >
+              <label class="control-inline"
+                ><input type="radio" name="size" value="L" /> L</label
+              >
+              <label class="control-inline"
+                ><input type="radio" name="size" value="XL" /> XL</label
+              >
+            </div>
+          </fieldset>
+
+          <div>
+            <label for="notes">Notes</label>
+            <textarea
+              id="notes"
+              name="notes"
+              rows="5"
+              placeholder="Tell us about a recent event you worked."
+            ></textarea>
+          </div>
+
+          <button
+            type="button"
+            class="btn"
+            aria-disabled="true"
+            title="Disabled for this assignment"
+          >
+            Submit
+          </button>
+        </form>
+      </div>
+
+      <aside class="logo-column">
+        <img
+          src="images/Leuven-logo-vertical-rgb.png"
+          alt="City of Leuven logo"
+        />
+        <img src="images/shannon.png" alt="Shannon logo" />
+        <img src="images/eventwise.png" alt="Eventwise logo" />
+      </aside>
+    </main>
+
+    <footer><p>© 2025 Eventwise • Leuven</p></footer>
+  </body>
+</html>
